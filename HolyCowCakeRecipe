@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Recipe Markup Homework</title>
+
+<style>
+    p {text-indent: 3%;}
+
+    h1, h2, body {font-family: "Goudy Old Style", Baskerville}
+</style>
+  
+</head>
+ 
+<!----------------------------------------------------------->
+  
+<body>
+  
+  <h1>Holy Cow Cake</h1>
+  
+  <p> <b>Prep Time</b>: 20 Minutes <b>Total Time</b>: 58 Minutes <b>Servings</b>: 20 </p>
+  
+<!----------------------------------------------------------->
+  <h2>Ingredients</h2> 
+  <ul>
+    <li> 18 ounces devil's food cake mix <small>(Note:if cake mix is in a 16.5oz box, add 6                    tablespoons of flour during production)</small>
+    <li> 1 &frac13; cups water
+    <li> 1 &frac14; cups vegetable oil
+    <li> 3 large eggs
+    <li> 8 ounces caramel topping
+    <li> 14 ounces sweetened condensed milk
+    <li> 1 cup Butterfinger candy bars, <i>crushed</i>
+    <li> 12 ounces frozen whipped topping, <i>thawed</i>
+    <li> 8 ounces cream cheese, <i>softened</i>
+  </ul>
+  
+<!----------------------------------------------------------->
+  <h2>Directions</h2>
+  
+  <ol>
+     <li>Preheat oven to 350 degrees.
+       
+     <li>Lightly spray a 13 by 9 inch pan with cooking spray.
+       
+     <li>Mix cake mix, water, oil, and eggs with an electric mixer. Blend on low speed for 1               minute, scrap the sides and then mix at medium for 2 more minutes. <i>Note:</i> The batter should look thick and well blended. 
+       
+     <li>Pour the batter into the prepared pan, smoothing out the top with the rubber spatual. Place the pan in the oven.
+       
+     <li>Bake the cake until it springs back when lightly pressed with you finger and just starts to pull away from the sides of the pan, 35 to 38 minutes. 
+       
+     <li>While the cake is baking, prepare the topping. Place the caramel topping and the sweetened condensed mimlk in a small bowl and stir to combine. 
+       
+     <li>Remove the pan from the oven and place it on a wire rack. 
+       
+     <li>Immediately poke holes in the top of the cake with a drinking straw or chopstick. 
+       
+     <li>Spoon this mixture over the warm cake so that it can seep down into the holes. Measure out half of the crushed candy bars and sprinkle the pieces over the cake. 
+       
+     <li> Place the whipped topping and cream cheese in a large mixing bowl and blend with an electric mxer on low speed until smooth and combined. 
+       
+     <li>Spread the frosting mixture over the candy covered cake.
+       
+     <li>Sprinkle the remaining candy pieces on top.
+       
+     <li>Place the pan, uncovered, in the refrigerator to chill the cake for about 20 minutes before cutting into squares and serving. 
+       
+     <li>Store this cake, covered with wax paper, in the refrigerator for up to 1 week. 
+  </ol>
+</body>
+</html>
