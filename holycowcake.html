@@ -15,145 +15,149 @@
   <meta name="author" content="Julia Bujalski">
   
   <style> 
-          /* Overall body style, ensures when you change size of window,
-      it does not get too small but that it does change size */
-      body {
-        width: 70%;
-        max-width: 60em;
-        min-width: 20em;
-        margin: auto;
-        padding: 0 1em 0 1em;
-        color: #000;
-        font-family: "Goudy Old Style", Baskerville;
-      }
+    /* Overall body style, ensures when you change size of window,
+it does not get too small but that it does change size */
+              article {
+                background-color: #fffefc;
+              }
+              body {
+                width: 70%;
+                max-width: 60em;
+                min-width: 20em;
+                margin: auto;
+                padding: 0 1em 0 1em;
+                color: #3a1200;
+                font-family: "Goudy Old Style", Baskerville;
+              }
 
-      /* Header picture styling */
-      .headerpic {
-        max-width:60%;
-        vertical-align: middle;
-        min-width: 20em; /* ensures it doesn't get too small on mobile */
-        display: block;
-        margin: 0 auto;
-      }
+              /* Header picture styling */
+              .headerpic {
+                max-width:60%;
+                vertical-align: middle;
+                min-width: 20em; /* ensures it doesn't get too small on mobile */
+                display: block;
+                margin: 0 auto;
+              }
 
-      /* Header styling */
-      header {
-        display: block;
-        width: 50%;
-        text-align: center;
-        margin: auto;
-        padding: 0 2cm .5cm 2cm;
-      }
+              /* Header styling */
+              header {
+                display: block;
+                width: 50%;
+                text-align: center;
+                margin: auto;
+                padding: 0 2cm .5cm 2cm;
+              }
 
-      /* looks at description list within header */
-      header dl {
-        display: inline-block;
-        margin: auto;
-        padding: 0 1em 0 1em;
-        border-left: .05em solid #000;
-        border-right: .05em solid #000;
-        text-align: center;
-      }
+              /* looks at description list within header */
+              header dl {
+                display: inline-block;
+                margin: auto;
+                padding: 0 1em 0 1em;
+                border-left: .05em solid #000;
+                border-right: .05em solid #000;
+                text-align: center;
+              }
 
-      /* looks at description title within header */
-      header dt {
-        padding: 0 1em 0 1em;
-        margin: 0 0 .5em 0;
-        text-align: center;
-      }
+              /* looks at description title within header */
+              header dt {
+                padding: 0 1em 0 1em;
+                margin: 0 0 .5em 0;
+                text-align: center;
+              }
 
-      /* looks at description term within header */
-      header dd{
-        margin: 0 0 .5em 0;
-      }
+              /* looks at description term within header */
+              header dd{
+                margin: 0 0 .5em 0;
+              }
 
-      time, b {
-        padding: 0 0 .5em 0;
-      }
+              time, b {
+                padding: 0 0 .5em 0;
+              }
 
-      /* Description beneath header styling */
-      .description {
-        margin: auto;
-        display: block;
-        padding: 0 0 1em 0;
-        text-align: center;
-        line-height: 2; /* double spaced */
-      }
+              /* Description beneath header styling */
+              .description {
+                margin: auto;
+                display: block;
+                padding: 0 0 1em 0;
+                text-align: center;
+                line-height: 2; /* double spaced */
+              }
 
-      /* Hides title "Menu" but still allows navigation to be
-      identified by menu title */
-      .visuallyhidden {
-        position: absolute;
-        overflow: hidden;
-        clip: rect(0 0 0 0);
-        height: 1px; width: 1px;
-        margin: -1px; padding: 0; border: 0;
-      }
+              /* Hides title "Menu" but still allows navigation to be
+              identified by menu title */
+              .visuallyhidden {
+                position: absolute;
+                overflow: hidden;
+                clip: rect(0 0 0 0);
+                height: 1px; width: 1px;
+                margin: -1px; padding: 0; border: 0;
+              }
 
-      /* Navigation styling */
-      nav {
-        margin: auto;
-        text-align: center;
-        border-top: .05em solid #f99;
-        padding: 1em;
-        color: #000;
-      }
+              /* Navigation styling */
+              nav {
+                margin: auto;
+                text-align: center;
+                border-top: .05em solid #f9c05c;
+                padding: 1em;
+                color: #000;
+              }
 
-      nav a {
-        color: #000;
-        display: inline-block;
-        letter-spacing: 1.5px;
-        word-spacing: 5em;
-      }
+              nav a {
+                color: #000;
+                display: inline-block;
+                letter-spacing: 1.5px;
+                word-spacing: 5em;
+              }
 
-      #hccingredients {
-        border-top: .05em solid #f99;
-      }
+              #hccingredients {
+                border-top: .05em solid #f9c05c;
+              }
 
-      /* Entire body text styling i.e. directions and ingredients */
-      .text {
-        padding: 0em 0em 2em 0em;
-        display: inline-block;
-      }
+              /* Entire body text styling i.e. directions and ingredients */
+              .text {
+                padding: 0em 0em 2em 0em;
+                display: inline-block;
+              }
 
-      /* indents ingredients and directions header */
-      h2 {
-        text-indent: 5%
-      }
+              /* indents ingredients and directions header */
+              h2 {
+                text-indent: 5%
+              }
 
-      /* places stylistic spacing in the list items */
-      li {
-        margin: 0 0 .5em 0;
-      }
+              /* places stylistic spacing in the list items */
+              li {
+                margin: 0 0 .5em 0;
+              }
 
-      /* flexible or responsive images */
-      img {
-        max-width: 25%;
-        max-height: auto;
-        min-width: 10em;
-        min-height: auto;
-      }
+              /* flexible or responsive images */
+              img {
+                max-width: 25%;
+                max-height: auto;
+                min-width: 10em;
+                min-height: auto;
+              }
 
-      /* links */
-      .links {
-        margin: 0 0 .5em 0;
-      }
+              /* links */
+              .links {
+                margin: 0 0 .5em 0;
+              }
 
-      .text a {
-        color: #f99; /*light pink*/
-      }
+              .text a {
+                color: #f9c05c; /*light pink*/
+              }
 
-      .text a:visted {
-        color: #000;/*black*/
-      }
+              .text a:visted {
+                color: #000;/*black*/
+              }
 
-      .text a:hover {
-        color: #DEB887;/*tan*/
-      }
+              .text a:hover {
+                color: #f99;/*tan*/
+              }
 
-      .to-the-top {
-        text-align: center;
-      }
+              .to-the-top {
+                text-align: center;
+              }
+
   </style> 
 </head>
 
