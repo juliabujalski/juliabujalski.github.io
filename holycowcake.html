@@ -4,90 +4,193 @@
   <meta charset="utf-8">
   <!-- this connects this html file to the corresponding external css sheet -->
   <link rel="stylesheet" href="css/screen.css">
+  <link rel="canonical" href="http://www.food.com/recipe/holy-cow-cake-195423">
   <!-- this makes it mobile friendly!, initial scale is 100% on device-->
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--more old school meta mobile friendly tags-->
+  <meta name="MobileOptimized" content="width">
+  <meta name="HandheldFriendly" content="true">
+  <!-- title, description, and author -->
   <title>Holy Cow!</title>
   <meta name="author" content="Julia Bujalski">
   
   <style> 
-          body {
+          /* Overall body style, ensures when you change size of window,
+      it does not get too small but that it does change size */
+      body {
         width: 70%;
         max-width: 60em;
-        min-width: 28em;
-        background-color: #fff;
-        color: #fff;
+        min-width: 20em;
+        margin: auto;
+        padding: 0 1em 0 1em;
+        color: #000;
         font-family: "Goudy Old Style", Baskerville;
       }
 
-      h2 {
-        text-indent: 5%
-      }
-      h4 {
-        margin: 0em .5cm .5em .5cm;
-      }
-
-      li {
-        margin: 0 0 .5em 0;
-      }
-
-      header {
-        text-align: center;
-        background-color: #251812;
-        margin: 0 2cm 0 2cm;
-      }
-
+      /* Header picture styling */
       .headerpic {
         max-width:60%;
         vertical-align: middle;
-        min-width: 10em;
+        min-width: 20em; /* ensures it doesn't get too small on mobile */
         display: block;
         margin: 0 auto;
       }
 
+      /* Header styling */
+      header {
+        display: block;
+        width: 50%;
+        text-align: center;
+        margin: auto;
+        padding: 0 2cm .5cm 2cm;
+      }
+
+      /* looks at description list within header */
+      header dl {
+        display: inline-block;
+        margin: auto;
+        padding: 0 1em 0 1em;
+        border-left: .05em solid #000;
+        border-right: .05em solid #000;
+        text-align: center;
+      }
+
+      /* looks at description title within header */
+      header dt {
+        padding: 0 1em 0 1em;
+        margin: 0 0 .5em 0;
+        text-align: center;
+      }
+
+      /* looks at description term within header */
+      header dd{
+        margin: 0 0 .5em 0;
+      }
+
+      time, b {
+        padding: 0 0 .5em 0;
+      }
+
+      /* Description beneath header styling */
+      .description {
+        margin: auto;
+        display: block;
+        padding: 0 0 1em 0;
+        text-align: center;
+        line-height: 2; /* double spaced */
+      }
+
+      /* Hides title "Menu" but still allows navigation to be
+      identified by menu title */
+      .visuallyhidden {
+        position: absolute;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        height: 1px; width: 1px;
+        margin: -1px; padding: 0; border: 0;
+      }
+
+      /* Navigation styling */
+      nav {
+        margin: auto;
+        text-align: center;
+        border-top: .05em solid #f99;
+        padding: 1em;
+        color: #000;
+      }
+
+      nav a {
+        color: #000;
+        display: inline-block;
+        letter-spacing: 1.5px;
+        word-spacing: 5em;
+      }
+
+      #hccingredients {
+        border-top: .05em solid #f99;
+      }
+
+      /* Entire body text styling i.e. directions and ingredients */
       .text {
-        background-color: #251812;
+        padding: 0em 0em 2em 0em;
+        display: inline-block;
+      }
+
+      /* indents ingredients and directions header */
+      h2 {
+        text-indent: 5%
+      }
+
+      /* places stylistic spacing in the list items */
+      li {
+        margin: 0 0 .5em 0;
       }
 
       /* flexible or responsive images */
       img {
         max-width: 25%;
-        height: auto;
+        max-height: auto;
+        min-width: 10em;
+        min-height: auto;
       }
 
+      /* links */
       .links {
         margin: 0 0 .5em 0;
       }
 
-      a {
-        color: #fff;
+      .text a {
+        color: #f99; /*light pink*/
       }
 
-      a:visted {
-        color: #999;
+      .text a:visted {
+        color: #000;/*black*/
       }
 
-      a:hover {
-        color: #f99;
+      .text a:hover {
+        color: #DEB887;/*tan*/
       }
-  </style>
+
+      .to-the-top {
+        text-align: center;
+      }
+  </style> 
 </head>
 
-<body>
+<body itemscope item="http://schema.org/Recipe">
   <article class="recipe" id="holy-cow-cake">
 
-    <img class="headerpic" src="http://1.bp.blogspot.com/_hPVZYZXee74/ScsDHv8tDlI/AAAAAAAAB2M/lt9MfAdSYU0/w1200-h630-p-nu/holy+cow+cake+4x6+copy.jpg" alt="Yummy Holy Cow Cake">
+  <img class="headerpic" imageprop="image" src="http://1.bp.blogspot.com/_hPVZYZXee74/ScsDHv8tDlI/AAAAAAAAB2M/lt9MfAdSYU0/w1200-h630-p-nu/holy+cow+cake+4x6+copy.jpg" alt="Yummy Holy Cow Cake">
 
   <header>
-    <h1>Holy Cow Cake</h1>
-    <p> <b>Prep Time</b>: 20 Minutes <b> Total Time</b>: 58 Minutes <b>Servings</b>: 20 </p>
+    <h1 itemprop="name">Holy Cow Cake</h1>
+    <dl><dt><b> Prep Time: </b></dt>
+    <dd><time datetime="20m" itemprop="prepTime">20 Minutes</time></dd>
+    <dt><b> Total Time: </b></dt>
+    <dd><time datetime="58m" itemprop="totalTime">58 Minutes</time></dd>
+    <dt><b> Servings: </b></dt>
+    <dd itemprop="recipeYield">20 Servings</dd></dl>
   </header>
+
+  <div class="description">
+    <em>Wondering why it's called Holy Cow Cake?</em> <br>
+    I'm so glad you asked! It is because it is <strong>so good</strong>
+    that when you take the first bite, you can't help but exclaim <strong>holy cow!</strong>
+  </div>
+
+<nav>
+  <h3 class="visuallyhidden">Menu</h3>
+      <a href="#hccingredients"><b>Ingredients</b></a>
+      <a href="#hccdirections"><b>Directions</b></a>
+</nav>
+
 
 <div class="text">
   <!-- BEGINNING OF THE INGREDIENTS -->
-  <div class="ingredients" id="hcc-ingredients">
+  <div class="ingredients" id="hccingredients">
   <h2>Ingredients</h2>
-    <ul>
-      <li> 18 ounces devil's food cake mix <small>(Note:if cake mix is in a 16.5oz box, add 6 tablespoons of flour during production)</small>
+    <ul itemprop="recipeIngredient">
+      <li> 18 ounces devil's food cake mix <small>(Note: if cake mix is in a 16.5oz box, add 6 tablespoons of flour during production)</small>
       </li><li> 1 ⅓ cups water
       </li><li> 1 ¼ cups vegetable oil
       </li><li> 3 large eggs
@@ -99,58 +202,57 @@
     </li></ul>
   </div>
   <!-- BEGINNING OF DIRECTIONS -->
-    <div class="directions" id="hcc-directions">
+  <div class="directions" id="hccdirections">
     <h2>Directions</h2>
 
-    <ol>
+    <ol itemprop="recipeInstructions">
       <li>Preheat oven to 350 degrees.
       <li>Lightly spray a 13 by 9 inch pan with cooking spray.
       <li>Mix cake mix, water, oil, and eggs with an electric mixer. Blend on low speed for 1 minute, scrap the sides and then mix at medium for 2 more minutes. <i>Note:</i> The batter should look thick and well blended. <br>
          <figure>
-           <img src="http://4.1m.yt/hpeqynf.jpg" alt="Step 2 Visual">
+           <img itemprop="image" src="http://4.1m.yt/hpeqynf.jpg" alt="Step 2 Visual">
          </figure>
 
       <li>Pour the batter into the prepared pan, smoothing out the top with the rubber spatual. Place the pan in the oven. <br>
          <figure>
-           <img src="http://4.1m.yt/aqw4ZQb.jpg" alt="Step 3 Visual">
+           <img itemprop="image" src="http://4.1m.yt/aqw4ZQb.jpg" alt="Step 3 Visual">
          </figure>
 
        <li>Bake the cake until it springs back when lightly pressed with you finger and just starts to pull away from the sides of the pan, 35 to 38 minutes.
        <li>While the cake is baking, prepare the topping. Place the caramel topping and the sweetened condensed mimlk in a small bowl and stir to combine. <br>
           <figure>
-            <img src="http://4.1m.yt/ONivwMb.jpg" alt="Step 5 Visual">
+            <img itemprop="image" src="http://4.1m.yt/ONivwMb.jpg" alt="Step 5 Visual">
           </figure>
 
        <li>Remove the pan from the oven and place it on a wire rack.
        <li>Immediately poke holes in the top of the cake with a drinking straw or chopstick. <br>
           <figure>
-            <img src="http://4.1m.yt/0gxML7y.jpg" alt="Step 7 Visual">
+            <img itemprop="image" src="http://4.1m.yt/0gxML7y.jpg" alt="Step 7 Visual">
           </figure>
 
        <li>Spoon this mixture over the warm cake so that it can seep down into the holes. Measure out half of the crushed candy bars and sprinkle the pieces over the cake. <br>
           <figure>
-            <img src="http://4.1m.yt/GFSGtCj.jpg" alt="Step 8 Visual">
+            <img itemprop="image" src="http://4.1m.yt/GFSGtCj.jpg" alt="Step 8 Visual">
           </figure>
 
        <li> Place the whipped topping and cream cheese in a large mixing bowl and blend with an electric mxer on low speed until smooth and combined.
        <li>Spread the frosting mixture over the candy covered cake.
        <li>Sprinkle the remaining candy pieces on top. <br>
           <figure>
-            <img src="http://4.1m.yt/SPTHAqE.jpg" alt="Step 11 Visual">
+            <img itemprop="image" src="http://4.1m.yt/SPTHAqE.jpg" alt="Step 11 Visual">
           </figure>
 
        <li>Place the pan, uncovered, in the refrigerator to chill the cake for about 20 minutes before cutting into squares and serving.
        <li>Store this cake, covered with wax paper, in the refrigerator for up to 1 week. Enjoy!
     </ol>
-    <div class ="links">
+  <div class ="links">
     <a href="http://www.food.com/recipe/holy-cow-cake-195423">Here</a> is the original recipe.
     Was this not what you were looking for? Here are some alternative recipes.
     <a href="https://www.recipelion.com/Chocolate-Cake-Recipes/Holy-Cow-Cake">Holy</a>
     <a href="http://allrecipes.com/recipe/237267/holy-cow-cake/">Cow!</a>
   </div>
 
-    <h4><em>Wondering why it's called Holy Cow Cake?</em> <br>
-    I'm so glad you asked! It is because it is <strong>so good</strong> that when you take the first bite, you can't help but exclaim <em>HOLY COW!</em></h4>
+<a href="#holy-cow-cake" title="Back to Top" class="to-the-top">⇡ From the top!</a>
   </div>
   </div>
   </article>
