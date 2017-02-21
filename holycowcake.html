@@ -5,166 +5,197 @@
   <!-- this connects this html file to the corresponding external css sheet -->
   <link rel="stylesheet" href="css/screen.css">
   <link rel="canonical" href="http://www.food.com/recipe/holy-cow-cake-195423">
+
   <!-- this makes it mobile friendly!, initial scale is 100% on device-->
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <!--more old school meta mobile friendly tags-->
   <meta name="MobileOptimized" content="width">
   <meta name="HandheldFriendly" content="true">
+
   <!-- title, description, and author -->
   <title>Holy Cow!</title>
   <meta name="author" content="Julia Bujalski">
   
   <style> 
-    /* Overall body style, ensures when you change size of window,
-it does not get too small but that it does change size */
-              article {
-                background-color: #fffefc;
-              }
-              body {
-                width: 70%;
-                max-width: 60em;
-                min-width: 20em;
-                margin: auto;
-                padding: 0 1em 0 1em;
-                color: #3a1200;
-                font-family: "Goudy Old Style", Baskerville;
-              }
+      /* Overall body style, ensures when you change size of window,
+      it does not get too small but that it does change size */
+      article {
+        background-color: #fffefc;
+      }
 
-              /* Header picture styling */
-              .headerpic {
-                max-width:60%;
-                vertical-align: middle;
-                min-width: 20em; /* ensures it doesn't get too small on mobile */
-                display: block;
-                margin: 0 auto;
-              }
+      body {
+        width: 70%;
+        max-width: 60em;
+        min-width: 20em;
+        margin: auto;
+        padding: 0 1em 0 1em;
+        color: #3a1200;
+        font-family: "Goudy Old Style", Baskerville;
+      }
 
-              /* Header styling */
-              header {
-                display: block;
-                width: 50%;
-                text-align: center;
-                margin: auto;
-                padding: 0 2cm .5cm 2cm;
-              }
+      /* Able to establish columns for larger screen sizes*/
+      .text ul{
+        list-style: none;
+        padding-left: 0;
+      }
+      .text .col {
+        display: inline-block;
+        width: 45%;
+        vertical-align: top;
+      }
 
-              /* looks at description list within header */
-              header dl {
-                display: inline-block;
-                margin: auto;
-                padding: 0 1em 0 1em;
-                border-left: .05em solid #000;
-                border-right: .05em solid #000;
-                text-align: center;
-              }
+      /* Header picture styling */
+      .headerpic {
+        max-width:60%;
+        vertical-align: middle;
+        display: block;
+        margin: 0 auto;
+      }
 
-              /* looks at description title within header */
-              header dt {
-                padding: 0 1em 0 1em;
-                margin: 0 0 .5em 0;
-                text-align: center;
-              }
+      /* Header styling */
+      header {
+        display: block;
+        width: 50%;
+        text-align: center;
+        margin: auto;
+        padding: 0 2cm .5cm 2cm;
+      }
 
-              /* looks at description term within header */
-              header dd{
-                margin: 0 0 .5em 0;
-              }
+      /* looks at description list within header */
+      header dl {
+        display: inline-block;
+        margin: auto;
+        padding: 0 1em 0 1em;
+        border-left: .05em solid #000;
+        border-right: .05em solid #000;
+        text-align: center;
+      }
 
-              time, b {
-                padding: 0 0 .5em 0;
-              }
+      /* looks at description title within header */
+      header dt {
+        padding: 0 1em 0 1em;
+        margin: 0 0 .5em 0;
+        text-align: center;
+      }
 
-              /* Description beneath header styling */
-              .description {
-                margin: auto;
-                display: block;
-                padding: 0 0 1em 0;
-                text-align: center;
-                line-height: 2; /* double spaced */
-              }
+      /* looks at description term within header */
+      header dd{
+        margin: 0 0 .5em 0;
+      }
 
-              /* Hides title "Menu" but still allows navigation to be
-              identified by menu title */
-              .visuallyhidden {
-                position: absolute;
-                overflow: hidden;
-                clip: rect(0 0 0 0);
-                height: 1px; width: 1px;
-                margin: -1px; padding: 0; border: 0;
-              }
+      time, b {
+        padding: 0 0 .5em 0;
+      }
 
-              /* Navigation styling */
-              nav {
-                margin: auto;
-                text-align: center;
-                border-top: .05em solid #f9c05c;
-                padding: 1em;
-                color: #000;
-              }
+      /* Description beneath header styling */
+      .description {
+        margin: auto;
+        display: block;
+        padding: 0 0 1em 0;
+        text-align: center;
+        line-height: 2; /* double spaced */
+      }
 
-              nav a {
-                color: #000;
-                display: inline-block;
-                letter-spacing: 1.5px;
-                word-spacing: 5em;
-              }
+      /* Hides title "Menu" but still allows navigation to be
+      identified by menu title */
+      .visuallyhidden {
+        position: absolute;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        height: 1px; width: 1px;
+        margin: -1px; padding: 0; border: 0;
+      }
 
-              #hccingredients {
-                border-top: .05em solid #f9c05c;
-              }
+      /* Navigation styling */
+      nav {
+        margin: auto;
+        text-align: center;
+        border-top: .05em solid #f9c05c;
+        border-bottom: .05em solid #f9c05c;
+        padding: 1em;
+        color: #000;
+      }
 
-              /* Entire body text styling i.e. directions and ingredients */
-              .text {
-                padding: 0em 0em 2em 0em;
-                display: inline-block;
-              }
+      nav a {
+        color: #000;
+        display: inline-block;
+        letter-spacing: 1.5px;
+        word-spacing: 5em;
+      }
 
-              /* indents ingredients and directions header */
-              h2 {
-                text-indent: 5%
-              }
+      /* Entire body text styling i.e. directions and ingredients */
+      .text {
+        padding: 0em 0em 2em 0em;
+        display: inline-block;
+      }
 
-              /* places stylistic spacing in the list items */
-              li {
-                margin: 0 0 .5em 0;
-              }
+      /* indents ingredients and directions header */
+      h2 {
+        text-indent: 5%
+      }
 
-              /* flexible or responsive images */
-              img {
-                max-width: 25%;
-                max-height: auto;
-                min-width: 10em;
-                min-height: auto;
-              }
+      /* places stylistic spacing in the list items */
+      li {
+        margin: 0 0 .5em 0;
+      }
 
-              /* links */
-              .links {
-                margin: 0 0 .5em 0;
-              }
+      /* flexible or responsive images */
+      img {
+        max-width: 25%;
+        max-height: auto;
+        min-width: 10em;
+        min-height: auto;
+      }
 
-              .text a {
-                color: #f9c05c; /*light pink*/
-              }
+      /* links */
+      .links {
+        margin: 0 0 .5em 0;
+      }
 
-              .text a:visted {
-                color: #000;/*black*/
-              }
+      .text a {
+        color: #f9c05c; /*light pink*/
+      }
 
-              .text a:hover {
-                color: #f99;/*tan*/
-              }
+      .text a:visted {
+        color: #000;/*black*/
+      }
 
-              .to-the-top {
-                text-align: center;
-              }
+      .text a:hover {
+        color: #f99;/*tan*/
+      }
+
+      .to-the-top {
+        text-align: center;
+      }
+
+      /*adjusting for different sized screens*/
+
+      @media (min-width: 40em) {
+        .hidden {
+          position: absolute;
+          overflow: hidden;
+          clip: rect(0 0 0 0);
+          height: 1px; width: 1px;
+          margin: -1px; padding: 0; border: 0;
+        }
+      }
+
+      @media (max-width: 40em) {
+        .text .col {
+          display: block;
+          width: 70%;
+          vertical-align: top;
+        }
+      }
 
   </style> 
 </head>
 
-<body itemscope itemtype="http://schema.org/Recipe">
+<body itemscope item="http://schema.org/Recipe">
   <article class="recipe" id="holy-cow-cake">
 
-  <img class="headerpic" itemprop="image" src="http://1.bp.blogspot.com/_hPVZYZXee74/ScsDHv8tDlI/AAAAAAAAB2M/lt9MfAdSYU0/w1200-h630-p-nu/holy+cow+cake+4x6+copy.jpg" alt="Yummy Holy Cow Cake">
+  <img class="headerpic" imageprop="image" src="http://1.bp.blogspot.com/_hPVZYZXee74/ScsDHv8tDlI/AAAAAAAAB2M/lt9MfAdSYU0/w1200-h630-p-nu/holy+cow+cake+4x6+copy.jpg" alt="Yummy Holy Cow Cake">
 
   <header>
     <h1 itemprop="name">Holy Cow Cake</h1>
@@ -182,73 +213,80 @@ it does not get too small but that it does change size */
     that when you take the first bite, you can't help but exclaim <strong>holy cow!</strong>
   </div>
 
-<nav>
+<nav class="hidden">
   <h3 class="visuallyhidden">Menu</h3>
       <a href="#hccingredients"><b>Ingredients</b></a>
       <a href="#hccdirections"><b>Directions</b></a>
 </nav>
 
-
-<div class="text">
+<ul class="text">
   <!-- BEGINNING OF THE INGREDIENTS -->
-  <div class="ingredients" id="hccingredients">
-  <h2>Ingredients</h2>
-    <ul itemprop="recipeIngredient">
-      <li> 18 ounces devil's food cake mix <small>(Note: if cake mix is in a 16.5oz box, add 6 tablespoons of flour during production)</small>
-      </li><li> 1 ⅓ cups water
-      </li><li> 1 ¼ cups vegetable oil
-      </li><li> 3 large eggs
-      </li><li> 8 ounces caramel topping
-      </li><li> 14 ounces sweetened condensed milk
-      </li><li> 1 cup Butterfinger candy bars, <i>crushed</i>
-      </li><li> 12 ounces frozen whipped topping, <i>thawed</i>
-      </li><li> 8 ounces cream cheese, <i>softened</i>
-    </li></ul>
-  </div>
-  <!-- BEGINNING OF DIRECTIONS -->
-  <div class="directions" id="hccdirections">
-    <h2>Directions</h2>
+  <li class="col">
+    <div class="ingredients" id="hccingredients">
+    <h2>Ingredients</h2>
+      <ul itemprop="recipeIngredient">
+        <li> 18 ounces devil's food cake mix <small>(Note: if cake mix is in a 16.5oz box, add 6 tablespoons of flour during production)</small></li>
+        <li> 1 ⅓ cups water</li>
+        <li> 1 ¼ cups vegetable oil</li>
+        <li> 3 large eggs</li>
+        <li> 8 ounces caramel topping</li>
+        <li> 14 ounces sweetened condensed milk</li>
+        <li> 1 cup Butterfinger candy bars, <i>crushed</i></li>
+        <li> 12 ounces frozen whipped topping, <i>thawed</i></li>
+        <li> 8 ounces cream cheese, <i>softened</i></li>
+      </ul>
+    </div>
+  </li>
 
+
+  <!-- BEGINNING OF DIRECTIONS -->
+  <li class="col">
+    <div class="directions" id="hccdirections">
+    <h2>Directions</h2>
     <ol itemprop="recipeInstructions">
-      <li>Preheat oven to 350 degrees.
-      <li>Lightly spray a 13 by 9 inch pan with cooking spray.
-      <li>Mix cake mix, water, oil, and eggs with an electric mixer. Blend on low speed for 1 minute, scrap the sides and then mix at medium for 2 more minutes. <i>Note:</i> The batter should look thick and well blended. <br>
+      <li>Preheat oven to 350 degrees. </li>
+      <li>Lightly spray a 13 by 9 inch pan with cooking spray. </li>
+      <li>Mix cake mix, water, oil, and eggs with an electric  mixer. Blend on low speed for 1 minute, scrap the sides and then mix at medium for 2 more minutes. <i>Note:</i> The batter should look thick and well blended. <br> </li>
          <figure>
            <img itemprop="image" src="http://4.1m.yt/hpeqynf.jpg" alt="Step 2 Visual">
          </figure>
 
-      <li>Pour the batter into the prepared pan, smoothing out the top with the rubber spatual. Place the pan in the oven. <br>
+      <li>Pour the batter into the prepared pan, smoothing out the top with the rubber spatual. Place the pan in the oven. <br> </li>
          <figure>
            <img itemprop="image" src="http://4.1m.yt/aqw4ZQb.jpg" alt="Step 3 Visual">
          </figure>
 
-       <li>Bake the cake until it springs back when lightly pressed with you finger and just starts to pull away from the sides of the pan, 35 to 38 minutes.
-       <li>While the cake is baking, prepare the topping. Place the caramel topping and the sweetened condensed mimlk in a small bowl and stir to combine. <br>
+       <li>Bake the cake until it springs back when lightly pressed with you finger and just starts to pull away from the sides of the pan, 35 to 38 minutes. </li>
+       <li>While the cake is baking, prepare the topping. Place the caramel topping and the sweetened condensed mimlk in a small bowl and stir to combine. <br> </li>
           <figure>
             <img itemprop="image" src="http://4.1m.yt/ONivwMb.jpg" alt="Step 5 Visual">
           </figure>
 
        <li>Remove the pan from the oven and place it on a wire rack.
-       <li>Immediately poke holes in the top of the cake with a drinking straw or chopstick. <br>
+       <li>Immediately poke holes in the top of the cake with a drinking straw or chopstick. <br> </li>
           <figure>
             <img itemprop="image" src="http://4.1m.yt/0gxML7y.jpg" alt="Step 7 Visual">
           </figure>
 
-       <li>Spoon this mixture over the warm cake so that it can seep down into the holes. Measure out half of the crushed candy bars and sprinkle the pieces over the cake. <br>
+       <li>Spoon this mixture over the warm cake so that it can seep down into the holes. Measure out half of the crushed candy bars and sprinkle the pieces over the cake. <br> </li>
           <figure>
             <img itemprop="image" src="http://4.1m.yt/GFSGtCj.jpg" alt="Step 8 Visual">
           </figure>
 
-       <li> Place the whipped topping and cream cheese in a large mixing bowl and blend with an electric mxer on low speed until smooth and combined.
-       <li>Spread the frosting mixture over the candy covered cake.
-       <li>Sprinkle the remaining candy pieces on top. <br>
+       <li> Place the whipped topping and cream cheese in a large mixing bowl and blend with an electric mxer on low speed until smooth and combined. </li>
+       <li>Spread the frosting mixture over the candy covered cake. </li>
+       <li>Sprinkle the remaining candy pieces on top. <br> </li>
           <figure>
             <img itemprop="image" src="http://4.1m.yt/SPTHAqE.jpg" alt="Step 11 Visual">
           </figure>
 
-       <li>Place the pan, uncovered, in the refrigerator to chill the cake for about 20 minutes before cutting into squares and serving.
-       <li>Store this cake, covered with wax paper, in the refrigerator for up to 1 week. Enjoy!
+       <li>Place the pan, uncovered, in the refrigerator to chill the cake for about 20 minutes before cutting into squares and serving. </li>
+       <li>Store this cake, covered with wax paper, in the refrigerator for up to 1 week. Enjoy! </li>
     </ol>
+  </li>
+  </div>
+</ul>
+
   <div class ="links">
     <a href="http://www.food.com/recipe/holy-cow-cake-195423">Here</a> is the original recipe.
     Was this not what you were looking for? Here are some alternative recipes.
@@ -256,7 +294,7 @@ it does not get too small but that it does change size */
     <a href="http://allrecipes.com/recipe/237267/holy-cow-cake/">Cow!</a>
   </div>
 
-<a href="#holy-cow-cake" title="Back to Top" class="to-the-top">⇡ From the top!</a>
+<a href="#holy-cow-cake" title="Back to Top" class="to-the-top">⇡ From the top! </a>
   </div>
   </div>
   </article>
